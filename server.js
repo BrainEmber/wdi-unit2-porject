@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 
-const mongoUri = process.emv.MONGODB_URI || 'mongodb://localhost:27017/sc2'
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/sc2'
 mongoose.connect(mongoUri);
 
 mongoose.connection.once('open', ()=>{
@@ -19,6 +19,6 @@ app.get('/', (req, res)=>{
 
 
 
-app.listen(port, ()=>{
+app.listen(port, (req, res)=>{
   console.log('listening');
 })
