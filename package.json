@@ -1,0 +1,25 @@
+{
+  "name": "wdi-unit2-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrainEmber/wdi-unit2-porject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrainEmber/wdi-unit2-porject/issues"
+  },
+  "homepage": "https://github.com/BrainEmber/wdi-unit2-porject#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.5"
+  }
+}
