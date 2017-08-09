@@ -6,8 +6,30 @@
   </head>
   <body>
     <header>
-      <h1>Popular Users</h1>
+      <h1>Users Hub</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/users/new">Create an Account</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <h2>Our Active Users</h2>
+      <ul>
+        <% for(let i=0; i < users.length; i++){ %>
+            <li>
+              <a
+              href='/users/<%=users[i]._id%>'><%=users[i].name%>
+              </a>
+            </li>
+      <%  } %>
+      </ul>
+    </main>
 
   </body>
 </html>
