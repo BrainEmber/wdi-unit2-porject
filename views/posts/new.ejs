@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Post A New Build</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href='/'>Home</a>
+          </li>
+          <li>
+            <a href="/posts">Builds</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/posts" method="POST">
+        Author: <select name='userId'>
+          <% for(let i=0; i < users.length; i++){ %>
+              <<option
+               value="<%=users[i].id%>"><%=users[i].name%></option>
+        <%  } %>
+        </select><br>
+        <input type="text" name="title"/><br>
+        <textarea name="body"></textarea><br>
+        <input type="submit" value="Publish Build"/>
+      </form>
+    </main>
+
+  </body>
+</html>

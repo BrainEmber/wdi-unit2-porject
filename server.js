@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
-// const postsController = require('./controllers/posts.js');
-// app.use('/posts', postsController);
+const postsController = require('./controllers/posts.js');
+app.use('/posts', postsController);
 
 
 
