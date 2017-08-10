@@ -31,7 +31,20 @@ router.get('/:id', (req, res)=>{
 
 router.delete('/:id', (req, res)=>{
   User.findByIdAndRemove(req.params.id, (err, foundUser)=>{
-    res.redirect('/users')
+    const postIds = [];
+    for(let i=0; i < foundUser.posts.length; i++){
+      postIds.push(foundUser.posts[i]._id);
+    }
+    Post.remove(
+      {
+        _id: {
+          $in: postIds
+        }
+      },
+        (err, data)=>{
+          res.redirect('/users');
+        }
+    );
   });
 });
 

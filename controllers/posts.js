@@ -52,6 +52,21 @@ router.delete('/:id', (req, res)=>{
   });
 });
 
+router.get('/:id/edit', (req, res)=>{
+  Post.findById(req.params.id, (err, foundPost)=>{
+    // console.log(req.params.id);
+    res.render('posts/edit.ejs', {
+      post: foundPost
+    });
+  });
+});
+
+router.put('/:id', (req, res)=>{
+  Post.findByIdAndUpdate(req.params.id, req.body, ()=>{
+    res.redirect('/posts');
+  });
+});
+
 
 
 
