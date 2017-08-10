@@ -35,6 +35,15 @@
       </section>
       <section>
         <h2>Builds by this user</h2>
+        <ul>
+          <% for(let i=0; i < user.posts.length; i++){ %>
+            <li>
+              <a href='/posts/<%=user.posts[i].id%>'>
+                <%=user.posts[i].title%>
+              </a>
+            </li>
+        <%  } %>
+        </ul>
       </section>
     </main>
 
