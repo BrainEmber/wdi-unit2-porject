@@ -1,8 +1,7 @@
 body {
   background-color: blue;
   text-align: center;
-  background-image: url(http://wallpapercave.com/wp/XSH0h3y.jpg);
-  background-size: cover;
+  background-image: url(http://wallpapercave.com/wp/rxXhHYr.jpg);
 }
 
 a {
@@ -39,4 +38,9 @@ h2  {
 form {
   background-color: blue;
   color: yellow;
+}
+
+h3 {
+  background-color: white;
+  color: black;
 }

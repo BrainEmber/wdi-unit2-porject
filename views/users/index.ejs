@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" herf="/basic.css" type="text/css"/>
+    <title>User's Hub</title>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
     <header>
-      <h1>Users Hub</h1>
+      <h1>User's Hub</h1>
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Home</a><br><br><br>
           </li>
           <li>
             <a href="/users/new">Create an Account</a>
@@ -23,10 +23,10 @@
       <h2>Our Active Users</h2>
       <ul>
         <% for(let i=0; i < users.length; i++){ %>
-            <li>
+            <li class='users'>
               <a
               href='/users/<%=users[i]._id%>'><%=users[i].name%>
-              </a>
+              </a><br><br><br>
             </li>
       <%  } %>
       </ul>

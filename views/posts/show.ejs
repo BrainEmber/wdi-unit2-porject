@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title><%=post.title%></title>
+    <link rel="stylesheet" href="/css/posts/app.css">
   </head>
   <body>
     <header>
@@ -11,7 +12,7 @@
       <nav>
         <ul>
           <li>
-            <a href='/'>Home</a>
+            <a href='/'>Home</a><br><br><br>
           </li>
           <li>
             <a href="/posts">Builds</a>
@@ -25,7 +26,7 @@
         <h3><%=post.body%><br></h3>
       </section>
       <section>
-        <a href='/posts/<%=post._id%>/edit'>Edit Build</a>
+        <a href='/posts/<%=post._id%>/edit'>Edit Build</a><br><br>
       </section>
       <section>
         <form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
