@@ -26,8 +26,13 @@
                value="<%=users[i].id%>"><%=users[i].name%></option>
         <%  } %>
         </select><br>
-        <input type="text" name="title"/><br>
-        <textarea name="body"></textarea><br>
+        Race: <select name="race">
+          <<option value="Zerg">Zerg</option>
+          <<option value="Protoss">Protoss</option>
+          <<option value="Terran">Terran</option>
+        </select><br>
+        Title: <input type="text" name="title"/><br>
+        Build: <textarea name="body"></textarea><br>
         <input type="submit" value="Publish Build"/>
       </form>
     </main>
